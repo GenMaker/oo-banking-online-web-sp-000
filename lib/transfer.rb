@@ -21,7 +21,7 @@ class Transfer
 
   def execute_transaction
     binding.pry
-    if sender.valid? == false
+    if sender.status == "closed"
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
     end
