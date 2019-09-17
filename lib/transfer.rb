@@ -20,6 +20,7 @@ class Transfer
   end
 
   def execute_transaction
+    binding.pry
     if sender.valid? == false
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
